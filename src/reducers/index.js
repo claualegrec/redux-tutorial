@@ -11,24 +11,31 @@ const reducer = (state, action) => {
         ...state,
         myList: [...state.myList, action.payload],
       };
-      
+
     case "DELETE_FAVORITE":
       return {
         ...state,
         myList: state.myList.filter((items) => items.id !== action.payload),
       };
 
-      case "LOGIN_REQUEST":
-        return {
-          ...state,
-          user: action.payload,
-        };
+    case "LOGIN_REQUEST":
+      return {
+        ...state,
+        user: action.payload,
+      };
 
-        case "LOGOUT_REQUEST":
-          return {
-            ...state,
-            user:action.payload,
-          }
+    case "LOGOUT_REQUEST":
+      return {
+        ...state,
+        user: action.payload,
+      };
+
+    case "REGISTER_REQUEST":
+      return {
+        ...state,
+        user: action.payload,
+      };
+      
     default:
       return state;
   }
