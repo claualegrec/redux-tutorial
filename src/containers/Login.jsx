@@ -25,7 +25,7 @@ const Login = (props) => {
 
   return (
     <>
-      <Header />
+      <Header isLogin />
       <section className="login">
         <section className="login__container">
           <h2>Inicia sesión</h2>
